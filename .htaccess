@@ -1,0 +1,13 @@
+Options -indexes
+RewriteEngine On
+
+#RewriteBase '/realestate/';
+RewriteBase /taninapp
+
+RewriteCond %{REQUEST_URI} !\.(js|ico|gif|jpg|jpeg|png|css|ttf|eot|woff|woff2|svg|otf|map|xlsx|mp3|mp4|zip)$
+RewriteRule .* index.php [L]
+
+
+<IfModule mod_security.c>
+  SecFilterEngine Off
+</IfModule>
